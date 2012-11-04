@@ -64,3 +64,45 @@ $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER einsatz_distinct BEFORE INSERT OR UPDATE ON einsatz
 	FOR EACH ROW EXECUTE PROCEDURE einsatz_distinct();
+
+CREATE OR REPLACE FUNCTION f_bonus (p_id integer) RETURNS NUMERIC(9,2) AS $$
+	DECLARE
+		p_count integer; -- Should be from {0,1} because of primary key
+		summe NUMERIC(9,2);
+	BEGIN
+		SELECT count(id)
+		INTO p_count
+		FROM person
+		WHERE id = p_id;
+
+		IF p_count = 0 THEN
+			RAISE EXCEPTION 'Person % nicht gefunden', p_id;
+		END IF;
+
+		WITH data AS (
+			SELECT
+				CASE platzierung
+					WHEN 1 THEN 1.0
+					WHEN 2 THEN 0.5
+					WHEN 3 THEN 0.25
+					ELSE 0.0
+				END factor,
+				wkt.sonderzahlung
+
+			FROM person p
+			JOIN pers_wktruppe pwt ON p.id = pwt.person_id
+			JOIN wettkampftruppe wkt ON wkt.id = pwt.wktruppe_id
+			JOIN wettkampf_teilnahme wkteil ON wkteil.wktruppe_id = wkt.id
+			WHERE p.id = 1
+		)
+		SELECT sum(factor * sonderzahlung)
+		INTO summe
+		FROM data;
+
+		IF summe IS NOT NULL THEN
+			RETURN summe;
+		ELSE
+			RETURN 0.0;
+		END IF;
+	END;
+$$ LANGUAGE plpgsql;

@@ -131,3 +131,42 @@ WHERE ereig_id = 1
 ROLLBACK TO prepared;
 
 ROLLBACK;
+
+--
+-- Test f_bonus
+--
+
+BEGIN;
+DELETE FROM wettkampf_teilnahme;
+DELETE FROM pers_wktruppe;
+DELETE FROM wettkampftruppe;
+SAVEPOINT init;
+
+-- Exceptions:
+SELECT f_bonus(-1);
+ROLLBACK TO init;
+
+-- Real stuff:
+INSERT INTO wettkampftruppe (id, gruendung, kategorie, sonderzahlung) VALUES
+	(10, '2012-01-01', 'whatever', 1000.00),
+	(11, '2012-01-01', 'whatever', 500.0);
+INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES
+	(1, 10, ''),
+	(2, 10, ''),
+	(3, 11, '');
+
+SELECT f_bonus(1) = 0.0 as result; -- Keine Teilnahmen, kein Bonus
+
+INSERT INTO wettkampf_teilnahme (wktruppe_id, wettkampf_id, platzierung) VALUES
+	(10, 1, 5);
+SELECT f_bonus(1) = 0.0 as result; -- Teilnahme, aber eine unzureichende Platzierung
+
+INSERT INTO wettkampf_teilnahme (wktruppe_id, wettkampf_id, platzierung) VALUES
+	(10, 2, 1);
+SELECT f_bonus(1) = 1000.0 as result;
+
+INSERT INTO wettkampf_teilnahme (wktruppe_id, wettkampf_id, platzierung) VALUES
+	(10, 3, 3);
+SELECT f_bonus(1) = 1250.0 as result;
+
+ROLLBACK;
