@@ -1,0 +1,109 @@
+Null display is "NULL".
+Timing is on.
+CREATE TABLE
+Time: 2.735 ms
+CREATE TABLE
+Time: 2.068 ms
+CREATE TABLE
+Time: 2.768 ms
+CREATE TABLE
+Time: 0.605 ms
+CREATE TABLE
+Time: 1.515 ms
+CREATE TABLE
+Time: 1.265 ms
+CREATE SEQUENCE
+Time: 0.613 ms
+ALTER SEQUENCE
+Time: 0.270 ms
+CREATE TABLE
+Time: 1.254 ms
+CREATE TABLE
+Time: 1.372 ms
+CREATE SEQUENCE
+Time: 0.662 ms
+ALTER SEQUENCE
+Time: 0.441 ms
+CREATE TABLE
+Time: 1.301 ms
+CREATE TABLE
+Time: 1.708 ms
+CREATE TABLE
+Time: 1.315 ms
+CREATE TABLE
+Time: 0.709 ms
+CREATE TABLE
+Time: 1.507 ms
+ALTER TABLE
+Time: 0.724 ms
+ALTER TABLE
+Time: 0.332 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "bergefahrzeug_pkey" for table "bergefahrzeug"
+ALTER TABLE
+Time: 1.145 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "bericht_pkey" for table "bericht"
+ALTER TABLE
+Time: 1.184 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "dienstgrad_pkey" for table "dienstgrad"
+ALTER TABLE
+Time: 1.495 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "einsatz_pkey" for table "einsatz"
+ALTER TABLE
+Time: 1.650 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "ereignis_pkey" for table "ereignis"
+ALTER TABLE
+Time: 0.842 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "fahrzeug_pkey" for table "fahrzeug"
+ALTER TABLE
+Time: 0.700 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "loeschfahrzeug_pkey" for table "loeschfahrzeug"
+ALTER TABLE
+Time: 0.707 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "mannschaft_pkey" for table "mannschaft"
+ALTER TABLE
+Time: 0.757 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "pers_wktruppe_pkey" for table "pers_wktruppe"
+ALTER TABLE
+Time: 0.721 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "person_pkey" for table "person"
+ALTER TABLE
+Time: 0.807 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "wettkampf_pkey" for table "wettkampf"
+ALTER TABLE
+Time: 0.811 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "wettkampf_teilnahme_pkey" for table "wettkampf_teilnahme"
+ALTER TABLE
+Time: 0.801 ms
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "wettkampftruppe_pkey" for table "wettkampftruppe"
+ALTER TABLE
+Time: 0.683 ms
+ALTER TABLE
+Time: 2.276 ms
+ALTER TABLE
+Time: 0.905 ms
+ALTER TABLE
+Time: 0.794 ms
+ALTER TABLE
+Time: 0.733 ms
+ALTER TABLE
+Time: 0.777 ms
+ALTER TABLE
+Time: 0.789 ms
+ALTER TABLE
+Time: 0.702 ms
+ALTER TABLE
+Time: 0.707 ms
+ALTER TABLE
+Time: 0.750 ms
+ALTER TABLE
+Time: 0.725 ms
+ALTER TABLE
+Time: 0.908 ms
+ALTER TABLE
+Time: 0.702 ms
+ALTER TABLE
+Time: 0.712 ms
+ALTER TABLE
+Time: 0.992 ms
+ALTER TABLE
+Time: 0.667 ms
