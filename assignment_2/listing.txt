@@ -271,3 +271,40 @@ INSERT 0 1
 Time: 0.138 ms
 COMMIT
 Time: 0.730 ms
+
+
+
+Null display is "NULL".
+Timing is on.
+DROP TABLE
+Time: 2.763 ms
+DROP TABLE
+Time: 1.108 ms
+DROP TABLE
+Time: 1.592 ms
+DROP TABLE
+Time: 0.904 ms
+DROP TABLE
+Time: 1.771 ms
+DROP TABLE
+Time: 1.198 ms
+DROP TABLE
+Time: 2.491 ms
+DROP TABLE
+Time: 1.571 ms
+DROP TABLE
+Time: 1.297 ms
+DROP TABLE
+Time: 1.653 ms
+DROP TABLE
+Time: 2.685 ms
+ALTER TABLE
+Time: 2.091 ms
+ALTER TABLE
+Time: 1.425 ms
+DROP TABLE
+Time: 144.697 ms
+DROP TABLE
+Time: 3.007 ms
+DROP TABLE
+Time: 1.341 ms
