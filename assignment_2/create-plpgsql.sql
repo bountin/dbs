@@ -27,7 +27,7 @@ CREATE OR REPLACE FUNCTION bericht_verfasser_constraints() RETURNS trigger AS $$
 	END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER bericht_verfasser_constraint BEFORE INSERT OR UPDATE ON bericht
+CREATE TRIGGER bericht_verfasser_constraints BEFORE INSERT OR UPDATE ON bericht
 	FOR EACH ROW EXECUTE PROCEDURE bericht_verfasser_constraints();
 
 -- ****************************************************************************** --
