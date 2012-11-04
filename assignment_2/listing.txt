@@ -1,310 +1,535 @@
+
+********* CREATE.SQL *********
+
 Null display is "NULL".
 Timing is on.
 CREATE TABLE
-Time: 3.276 ms
+Time: 3.314 ms
 CREATE TABLE
-Time: 1.941 ms
+Time: 2.491 ms
 CREATE TABLE
-Time: 2.548 ms
+Time: 3.155 ms
 CREATE TABLE
-Time: 0.729 ms
+Time: 1.033 ms
 CREATE TABLE
-Time: 1.572 ms
+Time: 1.636 ms
 CREATE TABLE
-Time: 0.611 ms
+Time: 0.544 ms
 CREATE SEQUENCE
-Time: 0.669 ms
+Time: 0.905 ms
 ALTER SEQUENCE
-Time: 0.289 ms
+Time: 0.290 ms
 CREATE TABLE
-Time: 1.253 ms
+Time: 1.431 ms
 CREATE TABLE
-Time: 1.414 ms
+Time: 1.684 ms
 CREATE TABLE
-Time: 1.775 ms
+Time: 1.507 ms
 CREATE SEQUENCE
-Time: 0.584 ms
+Time: 0.622 ms
 ALTER SEQUENCE
-Time: 0.295 ms
+Time: 0.336 ms
 CREATE TABLE
-Time: 1.211 ms
+Time: 1.894 ms
 CREATE TABLE
-Time: 1.613 ms
+Time: 3.358 ms
 CREATE TABLE
-Time: 1.363 ms
+Time: 3.565 ms
 CREATE TABLE
-Time: 0.596 ms
+Time: 1.563 ms
 CREATE TABLE
-Time: 1.739 ms
+Time: 3.747 ms
 ALTER TABLE
-Time: 0.709 ms
+Time: 1.710 ms
 ALTER TABLE
-Time: 0.301 ms
+Time: 0.752 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "bergefahrzeug_pkey" for table "bergefahrzeug"
 ALTER TABLE
-Time: 1.620 ms
+Time: 2.260 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "bericht_pkey" for table "bericht"
 ALTER TABLE
-Time: 1.480 ms
+Time: 1.533 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "dienstgrad_pkey" for table "dienstgrad"
 ALTER TABLE
-Time: 1.155 ms
+Time: 1.314 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "einsatz_pkey" for table "einsatz"
 ALTER TABLE
-Time: 0.998 ms
+Time: 1.680 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "ereignis_pkey" for table "ereignis"
 ALTER TABLE
-Time: 0.849 ms
+Time: 1.340 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "fahrzeug_pkey" for table "fahrzeug"
 ALTER TABLE
-Time: 0.770 ms
+Time: 1.195 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "fahrzeug_modell_pkey" for table "fahrzeug_modell"
 ALTER TABLE
-Time: 0.710 ms
+Time: 1.251 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "loeschfahrzeug_pkey" for table "loeschfahrzeug"
 ALTER TABLE
-Time: 0.704 ms
+Time: 1.490 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "mannschaft_pkey" for table "mannschaft"
 ALTER TABLE
-Time: 1.127 ms
+Time: 1.824 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "pers_wktruppe_pkey" for table "pers_wktruppe"
 ALTER TABLE
-Time: 1.167 ms
+Time: 1.111 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "person_pkey" for table "person"
 ALTER TABLE
-Time: 0.778 ms
+Time: 1.179 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "wettkampf_pkey" for table "wettkampf"
 ALTER TABLE
-Time: 0.776 ms
+Time: 1.366 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "wettkampf_teilnahme_pkey" for table "wettkampf_teilnahme"
 ALTER TABLE
-Time: 1.019 ms
+Time: 1.269 ms
 NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "wettkampftruppe_pkey" for table "wettkampftruppe"
 ALTER TABLE
-Time: 0.875 ms
+Time: 1.541 ms
 ALTER TABLE
-Time: 2.156 ms
+Time: 3.696 ms
 ALTER TABLE
-Time: 0.942 ms
+Time: 1.745 ms
 ALTER TABLE
-Time: 0.829 ms
+Time: 2.274 ms
 ALTER TABLE
-Time: 0.805 ms
+Time: 1.442 ms
 ALTER TABLE
-Time: 0.734 ms
+Time: 1.838 ms
+ALTER TABLE
+Time: 1.172 ms
+ALTER TABLE
+Time: 1.058 ms
+ALTER TABLE
+Time: 0.860 ms
+ALTER TABLE
+Time: 0.733 ms
+ALTER TABLE
+Time: 0.708 ms
+ALTER TABLE
+Time: 0.648 ms
 ALTER TABLE
 Time: 0.704 ms
 ALTER TABLE
-Time: 0.992 ms
+Time: 0.791 ms
 ALTER TABLE
-Time: 1.139 ms
+Time: 1.267 ms
 ALTER TABLE
-Time: 0.753 ms
+Time: 1.119 ms
 ALTER TABLE
-Time: 1.159 ms
-ALTER TABLE
-Time: 1.009 ms
-ALTER TABLE
-Time: 0.830 ms
-ALTER TABLE
-Time: 1.107 ms
-ALTER TABLE
-Time: 1.379 ms
-ALTER TABLE
-Time: 0.793 ms
-ALTER TABLE
-Time: 0.664 ms
+Time: 0.721 ms
 
 
-
+********* INSERT.SQL *********
 
 
 Null display is "NULL".
 Timing is on.
 SET
-Time: 0.176 ms
+Time: 0.366 ms
 SET
-Time: 0.055 ms
+Time: 0.224 ms
 SET
-Time: 0.036 ms
+Time: 0.126 ms
+SET
+Time: 0.050 ms
 SET
 Time: 0.039 ms
 SET
-Time: 0.034 ms
-SET
-Time: 0.116 ms
+Time: 0.146 ms
  setval
 --------
      10
 (1 row)
 
-Time: 0.860 ms
+Time: 0.963 ms
  setval
 --------
      30
 (1 row)
 
-Time: 0.367 ms
+Time: 0.326 ms
 BEGIN
-Time: 0.052 ms
+Time: 0.036 ms
 INSERT 0 1
-Time: 0.392 ms
-INSERT 0 1
-Time: 0.079 ms
-INSERT 0 1
-Time: 0.057 ms
-INSERT 0 1
-Time: 0.055 ms
-INSERT 0 1
-Time: 0.054 ms
-INSERT 0 1
-Time: 0.953 ms
-INSERT 0 1
-Time: 0.130 ms
-INSERT 0 1
-Time: 0.119 ms
-INSERT 0 1
-Time: 0.079 ms
-INSERT 0 1
-Time: 0.085 ms
-INSERT 0 1
-Time: 0.110 ms
-INSERT 0 1
-Time: 0.082 ms
-INSERT 0 1
-Time: 0.092 ms
-INSERT 0 1
-Time: 0.102 ms
-INSERT 0 1
-Time: 0.141 ms
-INSERT 0 1
-Time: 0.462 ms
-INSERT 0 1
-Time: 0.091 ms
-INSERT 0 1
-Time: 0.071 ms
-INSERT 0 1
-Time: 0.070 ms
-INSERT 0 1
-Time: 0.069 ms
-INSERT 0 1
-Time: 0.069 ms
-INSERT 0 1
-Time: 0.445 ms
-INSERT 0 1
-Time: 0.198 ms
-INSERT 0 1
-Time: 0.109 ms
-INSERT 0 1
-Time: 0.088 ms
-INSERT 0 1
-Time: 0.315 ms
+Time: 0.510 ms
 INSERT 0 1
 Time: 0.122 ms
 INSERT 0 1
-Time: 0.105 ms
+Time: 0.062 ms
 INSERT 0 1
-Time: 0.268 ms
+Time: 0.054 ms
 INSERT 0 1
-Time: 0.114 ms
+Time: 0.053 ms
+INSERT 0 1
+Time: 1.167 ms
+INSERT 0 1
+Time: 0.095 ms
 INSERT 0 1
 Time: 0.081 ms
 INSERT 0 1
-Time: 0.461 ms
+Time: 0.075 ms
 INSERT 0 1
-Time: 0.098 ms
+Time: 0.075 ms
 INSERT 0 1
-Time: 0.090 ms
+Time: 0.072 ms
 INSERT 0 1
-Time: 0.089 ms
-INSERT 0 1
-Time: 0.087 ms
-INSERT 0 1
-Time: 0.475 ms
-INSERT 0 1
-Time: 0.092 ms
-INSERT 0 1
-Time: 0.086 ms
-INSERT 0 1
-Time: 0.473 ms
-INSERT 0 1
-Time: 0.097 ms
-INSERT 0 1
-Time: 0.091 ms
-INSERT 0 1
-Time: 0.311 ms
-INSERT 0 1
-Time: 0.184 ms
+Time: 0.072 ms
 INSERT 0 1
 Time: 0.070 ms
 INSERT 0 1
 Time: 0.071 ms
 INSERT 0 1
+Time: 0.070 ms
+INSERT 0 1
+Time: 0.426 ms
+INSERT 0 1
+Time: 0.116 ms
+INSERT 0 1
+Time: 0.107 ms
+INSERT 0 1
+Time: 0.072 ms
+INSERT 0 1
+Time: 0.066 ms
+INSERT 0 1
 Time: 0.067 ms
 INSERT 0 1
-Time: 0.329 ms
+Time: 0.383 ms
 INSERT 0 1
-Time: 0.097 ms
+Time: 0.196 ms
 INSERT 0 1
-Time: 0.071 ms
+Time: 0.089 ms
 INSERT 0 1
-Time: 0.447 ms
+Time: 0.084 ms
+INSERT 0 1
+Time: 0.301 ms
+INSERT 0 1
+Time: 0.111 ms
+INSERT 0 1
+Time: 0.084 ms
+INSERT 0 1
+Time: 0.206 ms
+INSERT 0 1
+Time: 0.078 ms
+INSERT 0 1
+Time: 0.053 ms
+INSERT 0 1
+Time: 0.425 ms
+INSERT 0 1
+Time: 0.120 ms
+INSERT 0 1
+Time: 0.100 ms
+INSERT 0 1
+Time: 0.094 ms
 INSERT 0 1
 Time: 0.086 ms
 INSERT 0 1
-Time: 0.077 ms
+Time: 0.474 ms
 INSERT 0 1
-Time: 0.080 ms
+Time: 0.093 ms
 INSERT 0 1
-Time: 0.080 ms
+Time: 0.088 ms
 INSERT 0 1
-Time: 0.241 ms
+Time: 0.467 ms
 INSERT 0 1
-Time: 0.081 ms
+Time: 0.097 ms
 INSERT 0 1
-Time: 0.060 ms
+Time: 0.088 ms
 INSERT 0 1
-Time: 0.443 ms
+Time: 0.320 ms
 INSERT 0 1
-Time: 0.147 ms
+Time: 0.078 ms
 INSERT 0 1
-Time: 0.138 ms
+Time: 0.068 ms
+INSERT 0 1
+Time: 0.068 ms
+INSERT 0 1
+Time: 0.063 ms
+INSERT 0 1
+Time: 0.342 ms
+INSERT 0 1
+Time: 0.146 ms
+INSERT 0 1
+Time: 0.085 ms
+INSERT 0 1
+Time: 0.537 ms
+INSERT 0 1
+Time: 0.095 ms
+INSERT 0 1
+Time: 0.085 ms
+INSERT 0 1
+Time: 0.079 ms
+INSERT 0 1
+Time: 0.078 ms
+INSERT 0 1
+Time: 0.225 ms
+INSERT 0 1
+Time: 0.120 ms
+INSERT 0 1
+Time: 0.148 ms
+INSERT 0 1
+Time: 0.561 ms
+INSERT 0 1
+Time: 0.110 ms
+INSERT 0 1
+Time: 0.106 ms
 COMMIT
-Time: 0.730 ms
+Time: 0.649 ms
 
+
+********* DROP.SQL *********
 
 
 Null display is "NULL".
 Timing is on.
 DROP TABLE
-Time: 2.763 ms
+Time: 2.533 ms
 DROP TABLE
-Time: 1.108 ms
+Time: 1.126 ms
 DROP TABLE
-Time: 1.592 ms
+Time: 1.134 ms
 DROP TABLE
-Time: 0.904 ms
+Time: 0.883 ms
 DROP TABLE
-Time: 1.771 ms
+Time: 1.146 ms
 DROP TABLE
-Time: 1.198 ms
+Time: 1.261 ms
 DROP TABLE
-Time: 2.491 ms
+Time: 1.549 ms
 DROP TABLE
-Time: 1.571 ms
+Time: 1.459 ms
 DROP TABLE
-Time: 1.297 ms
+Time: 0.867 ms
 DROP TABLE
-Time: 1.653 ms
+Time: 1.174 ms
 DROP TABLE
-Time: 2.685 ms
+Time: 0.815 ms
 ALTER TABLE
-Time: 2.091 ms
+Time: 0.827 ms
 ALTER TABLE
-Time: 1.425 ms
+Time: 0.492 ms
 DROP TABLE
-Time: 144.697 ms
+Time: 1.252 ms
 DROP TABLE
-Time: 3.007 ms
+Time: 1.360 ms
 DROP TABLE
-Time: 1.341 ms
+Time: 1.389 ms
+
+
+********* CREATE-PLPGSQL.SQL *********
+
+
+Null display is "NULL".
+Timing is on.
+CREATE FUNCTION
+Time: 5.630 ms
+CREATE TRIGGER
+Time: 0.717 ms
+CREATE FUNCTION
+Time: 0.763 ms
+CREATE TRIGGER
+Time: 0.424 ms
+CREATE FUNCTION
+Time: 0.551 ms
+CREATE FUNCTION
+Time: 0.809 ms
+
+
+********* TEST-PLPGSQL.SQL *********
+
+
+Null display is "NULL".
+Timing is on.
+BEGIN
+Time: 0.190 ms
+DELETE 0
+Time: 1.060 ms
+SAVEPOINT
+Time: 0.112 ms
+ERROR:  M P (1) war am Einsatzbeginn noch nicht volljaehrig
+ROLLBACK
+Time: 0.123 ms
+ERROR:  M P (1) war am Einsatzbeginn noch nicht volljaehrig
+ROLLBACK
+Time: 0.031 ms
+INSERT 0 1
+Time: 0.457 ms
+INSERT 0 1
+Time: 0.163 ms
+ROLLBACK
+Time: 0.043 ms
+BEGIN
+Time: 0.023 ms
+DELETE 3
+Time: 0.061 ms
+SAVEPOINT
+Time: 0.021 ms
+ERROR:  wer auch immer (4) war an diesem Einsatz nicht beteiligt
+ROLLBACK
+Time: 0.022 ms
+INSERT 0 1
+Time: 0.144 ms
+ROLLBACK
+Time: 0.032 ms
+BEGIN
+Time: 0.022 ms
+DELETE 1
+Time: 0.074 ms
+SAVEPOINT
+Time: 0.021 ms
+INSERT 0 1
+Time: 0.766 ms
+INSERT 0 1
+Time: 0.170 ms
+SAVEPOINT
+Time: 0.032 ms
+ERROR:  FZG 2 oder Mannschaft 20 bereits an diesem Einsatz beteiligt
+ROLLBACK
+Time: 0.022 ms
+ERROR:  FZG 2 oder Mannschaft 30 bereits an diesem Einsatz beteiligt
+ROLLBACK
+Time: 0.021 ms
+ERROR:  FZG 3 oder Mannschaft 20 bereits an diesem Einsatz beteiligt
+ROLLBACK
+Time: 0.021 ms
+UPDATE 1
+Time: 0.314 ms
+UPDATE 1
+Time: 0.169 ms
+UPDATE 1
+Time: 0.151 ms
+ROLLBACK
+Time: 0.025 ms
+ERROR:  FZG 1 oder Mannschaft 20 bereits an diesem Einsatz beteiligt
+ROLLBACK
+Time: 0.022 ms
+ERROR:  FZG 2 oder Mannschaft 10 bereits an diesem Einsatz beteiligt
+ROLLBACK
+Time: 0.022 ms
+ERROR:  FZG 1 oder Mannschaft 1 bereits an diesem Einsatz beteiligt
+ROLLBACK
+Time: 0.022 ms
+ROLLBACK
+Time: 0.035 ms
+BEGIN
+Time: 0.022 ms
+DELETE 3
+Time: 0.183 ms
+DELETE 5
+Time: 0.154 ms
+DELETE 3
+Time: 0.628 ms
+SAVEPOINT
+Time: 0.026 ms
+ERROR:  Person -1 nicht gefunden
+ROLLBACK
+Time: 0.027 ms
+INSERT 0 2
+Time: 0.252 ms
+INSERT 0 3
+Time: 0.314 ms
+ result
+--------
+ t
+(1 row)
+
+Time: 0.725 ms
+INSERT 0 1
+Time: 0.344 ms
+ result
+--------
+ t
+(1 row)
+
+Time: 0.230 ms
+INSERT 0 1
+Time: 0.085 ms
+ result
+--------
+ t
+(1 row)
+
+Time: 0.131 ms
+INSERT 0 1
+Time: 0.082 ms
+ result
+--------
+ t
+(1 row)
+
+Time: 0.114 ms
+ROLLBACK
+Time: 0.036 ms
+BEGIN
+Time: 0.021 ms
+ERROR:  Der Parameter muss positiv sein
+ROLLBACK
+Time: 0.021 ms
+BEGIN
+Time: 0.018 ms
+ id | vorname |  nachname  | geburtstag | beitrittstag | telefon | mannschaft | dienstgrad | dienstgrad_aenderung
+----+---------+------------+------------+--------------+---------+------------+------------+----------------------
+  1 | M       | P          | 1990-12-31 | 2000-01-01   | +43 123 |         10 |          1 | 2001-04-07
+  2 | L       | P          | 1992-12-22 | 2000-01-01   | +43 123 |         10 |          2 | 2001-04-07
+  3 | E       | P          | 1992-01-03 | 2000-01-01   | +43 123 |         10 |          2 | 2001-04-07
+  4 | wer     | auch immer | 1988-01-01 | 2000-01-01   | +43 123 |         20 |          3 | 2001-04-07
+  5 | wer     | auch immer | 1988-01-01 | 2000-01-01   | +43 123 |         30 |          3 | 2001-04-07
+(5 rows)
+
+Time: 0.224 ms
+NOTICE:  Person L P wurde befoerdert von Mittlerer auf Oberster
+NOTICE:  Person E P wurde befoerdert von Mittlerer auf Oberster
+NOTICE:  Person wer auch immer wurde befoerdert von Unterer 1 auf Mittlerer
+NOTICE:  Person wer auch immer wurde befoerdert von Unterer 1 auf Mittlerer
+ p_erhoehe_dienstgrad
+----------------------
+
+(1 row)
+
+Time: 1.136 ms
+ id | vorname |  nachname  | geburtstag | beitrittstag | telefon | mannschaft | dienstgrad | dienstgrad_aenderung
+----+---------+------------+------------+--------------+---------+------------+------------+----------------------
+  1 | M       | P          | 1990-12-31 | 2000-01-01   | +43 123 |         10 |          1 | 2001-04-07
+  2 | L       | P          | 1992-12-22 | 2000-01-01   | +43 123 |         10 |          1 | 2012-11-04
+  3 | E       | P          | 1992-01-03 | 2000-01-01   | +43 123 |         10 |          1 | 2012-11-04
+  4 | wer     | auch immer | 1988-01-01 | 2000-01-01   | +43 123 |         20 |          2 | 2012-11-04
+  5 | wer     | auch immer | 1988-01-01 | 2000-01-01   | +43 123 |         30 |          2 | 2012-11-04
+(5 rows)
+
+Time: 0.183 ms
+ p_erhoehe_dienstgrad
+----------------------
+
+(1 row)
+
+Time: 0.178 ms
+ id | vorname |  nachname  | geburtstag | beitrittstag | telefon | mannschaft | dienstgrad | dienstgrad_aenderung
+----+---------+------------+------------+--------------+---------+------------+------------+----------------------
+  1 | M       | P          | 1990-12-31 | 2000-01-01   | +43 123 |         10 |          1 | 2001-04-07
+  2 | L       | P          | 1992-12-22 | 2000-01-01   | +43 123 |         10 |          1 | 2012-11-04
+  3 | E       | P          | 1992-01-03 | 2000-01-01   | +43 123 |         10 |          1 | 2012-11-04
+  4 | wer     | auch immer | 1988-01-01 | 2000-01-01   | +43 123 |         20 |          2 | 2012-11-04
+  5 | wer     | auch immer | 1988-01-01 | 2000-01-01   | +43 123 |         30 |          2 | 2012-11-04
+(5 rows)
+
+Time: 0.091 ms
+ROLLBACK
+Time: 0.033 ms
+
+
+********* DROP-PLPGSQL.SQL *********
+
+
+Null display is "NULL".
+Timing is on.
+DROP TRIGGER
+Time: 0.938 ms
+DROP TRIGGER
+Time: 0.365 ms
+DROP FUNCTION
+Time: 0.387 ms
+DROP FUNCTION
+Time: 0.310 ms
+DROP FUNCTION
+Time: 0.403 ms
+DROP FUNCTION
+Time: 0.315 ms
