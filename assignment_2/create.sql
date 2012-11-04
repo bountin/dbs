@@ -35,7 +35,7 @@ CREATE TABLE fahrzeug (
     id integer NOT NULL,
     sitzplaetze integer NOT NULL,
     gewicht integer NOT NULL,
-    modell text NOT NULL,
+    modell integer NOT NULL,
     baujahr date NOT NULL
 );
 CREATE SEQUENCE fahrzeug_id_seq
@@ -49,6 +49,11 @@ CREATE TABLE loeschfahrzeug (
     id integer NOT NULL,
     hauptloeschmittel text NOT NULL,
     loeschmittelmenge integer NOT NULL
+);
+CREATE TABLE fahrzeug_modell (
+    id integer NOT NULL,
+    marke text NOT NULL,
+    modell text NOT NULL
 );
 CREATE TABLE mannschaft (
     id integer NOT NULL,
@@ -96,7 +101,7 @@ CREATE TABLE wettkampftruppe (
     id integer NOT NULL,
     gruendung date NOT NULL,
     kategorie text NOT NULL,
-    sonderzahlung text NOT NULL,
+    sonderzahlung numeric(9,2) NOT NULL,
     CONSTRAINT gruendung_in_vergangenheit CHECK (gruendung <= CURRENT_DATE)
 );
 ALTER TABLE ONLY fahrzeug ALTER COLUMN id SET DEFAULT nextval('fahrzeug_id_seq'::regclass);
@@ -113,6 +118,8 @@ ALTER TABLE ONLY ereignis
     ADD CONSTRAINT ereignis_pkey PRIMARY KEY (id);
 ALTER TABLE ONLY fahrzeug
     ADD CONSTRAINT fahrzeug_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY fahrzeug_modell
+    ADD CONSTRAINT fahrzeug_modell_pkey PRIMARY KEY (id);
 ALTER TABLE ONLY loeschfahrzeug
     ADD CONSTRAINT loeschfahrzeug_pkey PRIMARY KEY (id);
 ALTER TABLE ONLY mannschaft
@@ -141,6 +148,8 @@ ALTER TABLE ONLY einsatz
     ADD CONSTRAINT einsatz_fzg_id_fkey FOREIGN KEY (fzg_id) REFERENCES fahrzeug(id);
 ALTER TABLE ONLY einsatz
     ADD CONSTRAINT einsatz_man_id_fkey FOREIGN KEY (man_id) REFERENCES mannschaft(id);
+ALTER TABLE ONLY fahrzeug
+    ADD CONSTRAINT fahrzeug_modell_fkey FOREIGN KEY (modell) REFERENCES fahrzeug_modell(id);
 ALTER TABLE ONLY loeschfahrzeug
     ADD CONSTRAINT loeschfahrzeug_id_fkey FOREIGN KEY (id) REFERENCES fahrzeug(id);
 ALTER TABLE ONLY mannschaft
