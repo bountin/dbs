@@ -5,3 +5,4 @@ DROP FUNCTION bericht_verfasser_constraints();
 DROP FUNCTION einsatz_distinct();
 
 DROP FUNCTION f_bonus;
+DROP FUNCTION p_erhoehe_dienstgrad;

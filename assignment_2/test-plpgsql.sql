@@ -170,3 +170,21 @@ INSERT INTO wettkampf_teilnahme (wktruppe_id, wettkampf_id, platzierung) VALUES
 SELECT f_bonus(1) = 1250.0 as result;
 
 ROLLBACK;
+
+--
+-- Test p_erhoehe_dienstgrad
+--
+BEGIN;
+
+-- Exception:
+SELECT p_erhoehe_dienstgrad(-1);
+ROLLBACK; BEGIN;
+
+-- Okay:
+SELECT * FROM person ORDER BY id;
+SELECT p_erhoehe_dienstgrad(1);
+SELECT * FROM person ORDER BY id;
+SELECT p_erhoehe_dienstgrad(1);
+SELECT * FROM person ORDER BY id;
+
+ROLLBACK;

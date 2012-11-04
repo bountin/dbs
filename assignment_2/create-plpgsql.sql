@@ -106,3 +106,37 @@ CREATE OR REPLACE FUNCTION f_bonus (p_id integer) RETURNS NUMERIC(9,2) AS $$
 		END IF;
 	END;
 $$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION p_erhoehe_dienstgrad (zeit integer)
+	RETURNS void AS $$
+	DECLARE
+		candidates CURSOR FOR
+			SELECT *
+			FROM person p
+			JOIN dienstgrad dg ON p.dienstgrad = dg.id
+			WHERE age(dienstgrad_aenderung) >= (zeit::text || ' years')::interval
+				AND dg.parent IS NOT NULL -- Ignoriere Personen, die bereits einen hiechsten Dienstrang haben
+			FOR UPDATE;
+		new_dienstgrad_bez dienstgrad.bezeichnung%TYPE;
+	BEGIN
+		IF zeit < 0 OR zeit IS NULL THEN
+			RAISE EXCEPTION 'Der Parameter muss positiv sein';
+		END IF;
+
+		FOR p IN candidates LOOP
+			UPDATE person
+			SET dienstgrad = p.parent,
+				dienstgrad_aenderung = CURRENT_DATE
+			WHERE CURRENT OF candidates;
+
+			SELECT bezeichnung
+			INTO new_dienstgrad_bez
+			FROM dienstgrad
+			WHERE id = p.parent;
+
+			RAISE NOTICE 'Person % % wurde befoerdert von % auf %', p.vorname, p.nachname, p.bezeichnung, new_dienstgrad_bez;
+		END LOOP;
+
+		RETURN;
+	END
+$$ LANGUAGE plpgsql
