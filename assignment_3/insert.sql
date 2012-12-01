@@ -45,9 +45,6 @@ INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (2, 4, 1
 INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (3, 4, 1234, 3, '1990-01-01');
 INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (4, 4, 1234, 2, '1990-01-01');
 INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (5, 4, 1234, 4, '1990-01-01');
-INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (6, 4, 1234, 4, '1990-01-01');
-INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (7, 4, 1234, 4, '1990-01-01');
-INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (8, 4, 1234, 4, '1990-01-01');
 INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (9, 4, 1234, 5, '1990-01-01');
 INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (10, 4, 1234, 5, '1990-01-01');
 
@@ -57,9 +54,6 @@ INSERT INTO fahrzeug (id, sitzplaetze, gewicht, modell, baujahr) VALUES (10, 4, 
 --
 
 INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (5, 123, true);
-INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (6, 123, true);
-INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (7, 123, true);
-INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (8, 123, true);
 INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (9, 123, true);
 INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (10, 123, true);
 
@@ -117,8 +111,12 @@ INSERT INTO bericht (ereignis_id, bericht_nummer, ersteller, kurzbeschreibung, d
 --
 
 INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (5, 10, 1);
-INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (6, 20, 2);
-INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (7, 30, 3);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (3, 20, 2);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (4, 30, 3);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (9, 10, 2);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (10, 10, 3);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (9, 20, 3);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (10, 20, 1);
 
 
 --
