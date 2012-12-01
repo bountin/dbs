@@ -62,10 +62,10 @@ INSERT INTO bergefahrzeug (id, max_zugleistung, hebevorrichtung) VALUES (10, 123
 -- Data for Name: dienstgrad; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (1, 'Oberster', 1234.56, NULL);
-INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (2, 'Mittlerer', 1234.56, 1);
-INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (3, 'Unterer 1', 1234.56, 2);
-INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (4, 'Unterer 2', 1234.56, 2);
+INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (1, 'Oberster', 35, NULL);
+INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (2, 'Mittlerer', 25, 1);
+INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (3, 'Unterer 1', 10, 2);
+INSERT INTO dienstgrad (id, bezeichnung, basisgehalt, parent) VALUES (4, 'Unterer 2', 10, 2);
 
 
 --
