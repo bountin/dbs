@@ -84,6 +84,7 @@ INSERT INTO ereignis (id, typ, ort, zeitpunkt, betroffene_personen) VALUES (3, '
 INSERT INTO mannschaft (id, rufname, leiter) VALUES (10, 'A-Team', 1);
 INSERT INTO mannschaft (id, rufname, leiter) VALUES (20, 'B-Team', 4);
 INSERT INTO mannschaft (id, rufname, leiter) VALUES (30, 'C-Team', 5);
+INSERT INTO mannschaft (id, rufname, leiter) VALUES (40, 'D-Team', 6);
 
 
 --
@@ -95,6 +96,8 @@ INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, ma
 INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, mannschaft, dienstgrad, dienstgrad_aenderung) VALUES (3, 'E', 'P', '1992-01-03', '2000-01-01', '+43 123', 10, 2, '2001-04-07');
 INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, mannschaft, dienstgrad, dienstgrad_aenderung) VALUES (4, 'wer', 'auch immer', '1988-01-01', '2000-01-01', '+43 123', 20, 3, '2001-04-07');
 INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, mannschaft, dienstgrad, dienstgrad_aenderung) VALUES (5, 'wer', 'auch immer', '1988-01-01', '2000-01-01', '+43 123', 30, 3, '2001-04-07');
+INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, mannschaft, dienstgrad, dienstgrad_aenderung) VALUES (6, 'ABC', 'DEF', '1988-01-01', '2000-01-01', '+43 123', 40, 3, '2001-04-07');
+INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, mannschaft, dienstgrad, dienstgrad_aenderung) VALUES (7, 'ABC', 'DEF', '1988-01-01', '2000-01-01', '+43 123', 40, 3, '2001-04-07');
 
 
 --
@@ -103,7 +106,7 @@ INSERT INTO person (id, vorname, nachname, geburtstag, beitrittstag, telefon, ma
 
 INSERT INTO bericht (ereignis_id, bericht_nummer, ersteller, kurzbeschreibung, datum) VALUES (1, 1, 1, 'foo', '2012-05-06');
 INSERT INTO bericht (ereignis_id, bericht_nummer, ersteller, kurzbeschreibung, datum) VALUES (1, 2, 1, 'foo', '2012-05-06');
-INSERT INTO bericht (ereignis_id, bericht_nummer, ersteller, kurzbeschreibung, datum) VALUES (1, 3, 1, 'foo', '2012-05-06');
+INSERT INTO bericht (ereignis_id, bericht_nummer, ersteller, kurzbeschreibung, datum) VALUES (1, 3, 6, 'foo', '2012-05-06');
 
 
 --
@@ -117,6 +120,8 @@ INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (9, 10, 2);
 INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (10, 10, 3);
 INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (9, 20, 3);
 INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (10, 20, 1);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (1, 30, 1);
+INSERT INTO einsatz (fzg_id, man_id, ereig_id) VALUES (2, 40, 1);
 
 
 --

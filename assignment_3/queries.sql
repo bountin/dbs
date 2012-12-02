@@ -19,3 +19,24 @@ WITH RECURSIVE dienstgrade (id, bezeichnung, basisgehalt, parent, gehalt_diff) A
 )
 SELECT id, bezeichnung, basisgehalt, gehalt_diff
 FROM dienstgrade;
+
+WITH berichte_pre AS (
+	SELECT p.id, vorname, nachname, count(b.datum) as anz_b, (
+		SELECT count(*)
+		FROM einsatz e
+		JOIN person pi ON pi.mannschaft = e.man_id
+		WHERE pi.id = p.id
+	) as anz_e
+	FROM person p
+	LEFT JOIN bericht b ON b.ersteller = p.id
+	GROUP BY 1
+),
+berichte AS (
+	SELECT *
+	FROM berichte_pre
+	WHERE anz_e < 3
+)
+SELECT id, vorname, nachname, anz_b
+FROM berichte
+WHERE anz_b = (SELECT min(anz_b) FROM berichte)
+;
