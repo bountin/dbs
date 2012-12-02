@@ -162,6 +162,7 @@ INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES (5, 1, 'hans
 INSERT INTO wettkampf (id, ort, veranstalter, kategorie, von, bis) VALUES (1, 'Wiese', 'Raika', 'Bogenschießen', '2012-11-01 14:00:00', '2012-11-01 19:00:00');
 INSERT INTO wettkampf (id, ort, veranstalter, kategorie, von, bis) VALUES (2, 'Wiese', 'Raika', 'Bogenschießen', '2012-11-01 14:00:00', '2012-11-01 19:00:00');
 INSERT INTO wettkampf (id, ort, veranstalter, kategorie, von, bis) VALUES (3, 'Wiese', 'Raika', 'Bogenschießen', '2012-11-01 14:00:00', '2012-11-01 19:00:00');
+INSERT INTO wettkampf (id, ort, veranstalter, kategorie, von, bis) VALUES (4, 'Halle', 'Raika', 'Turmspringen', '2012-12-01 14:00:00', '2012-12-01 19:00:00');
 
 
 --

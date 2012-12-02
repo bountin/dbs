@@ -73,13 +73,38 @@ public class Szenario1 {
          * Setzen Sie das aus Ihrer Sicht passende Isolation-Level:
          */
 
-        /*
-         * Abfrage 1:
-         * Ermitteln Sie das Durchschnittsalter jener Personen, welche
-         * zumindest an einem der letzten drei Wettkaempfe teilgenommen
-         * haben und geben Sie dieses auf der Konsole aus.
-         */
+	    try {
+		    connection.setAutoCommit(false);
+		    connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
 
+	    /*
+		 * Abfrage 1:
+		 * Ermitteln Sie das Durchschnittsalter jener Personen, welche
+		 * zumindest an einem der letzten drei Wettkaempfe teilgenommen
+		 * haben und geben Sie dieses auf der Konsole aus.
+		 */
+
+			Statement stmt1 = connection.createStatement();
+
+		    ResultSet rs1 = stmt1.executeQuery(
+			    "WITH personen(id) AS (\n" +
+			    "        SELECT DISTINCT pwk.person_id\n" +
+			    "        FROM wettkampf_teilnahme wkt\n" +
+			    "        JOIN pers_wktruppe pwk ON pwk.wktruppe_id = wkt.wktruppe_id\n" +
+			    "        WHERE wkt.wettkampf_id IN (\n" +
+			    "                SELECT id\n" +
+			    "                FROM wettkampf\n" +
+			    "                ORDER BY bis DESC\n" +
+			    "                LIMIT 3\n" +
+			    "        )\n" +
+			    ")\n" +
+			    "SELECT avg(age(geburtstag)), EXTRACT( EPOCH FROM avg(age(geburtstag)) )\n" +
+			    "FROM person\n" +
+			    "WHERE id IN (SELECT * FROM personen);"
+		    );
+
+		    rs1.next();
+		    System.out.println("\tAVG 1: " + rs1.getString(1));
         /*
          * Vorgegebener Codeteil
          * ################################################################################
@@ -95,9 +120,21 @@ public class Szenario1 {
          * Personen und geben Sie dieses auf der der Konsole aus.
          */
 
+		    Statement stmt2 = connection.createStatement();
+
+		    ResultSet rs2 = stmt2.executeQuery(
+			    "SELECT avg(age(geburtstag)), EXTRACT( EPOCH FROM avg(age(geburtstag)) )\n" +
+			    "FROM person;"
+		    );
+
+		    rs2.next();
+		    System.out.println("\tAVG 2: " + rs2.getString(1));
+
         /*
          * Geben Sie das Verhaeltnis der beiden abgefragten Werte aus
          */
+
+		    System.out.println("\tVerhältnis: " + rs2.getDouble(2) / rs1.getDouble(2));
 
         /*
          * Vorgegebener Codeteil
@@ -111,6 +148,10 @@ public class Szenario1 {
         /*
          * Beenden Sie die Transaktion
          */
+
+	    } catch (SQLException e) {
+		    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+	    }
 
         System.out.println("Transaktion A Ende");
     }
@@ -129,7 +170,7 @@ public class Szenario1 {
 
             stmt.executeUpdate("INSERT INTO Person (id, Vorname, Nachname, Geburtstag, Beitrittstag, " +
                                "Telefon, Dienstgrad, Dienstgrad_aenderung, Mannschaft) VALUES (" +
-                               "10, 'Samuel', 'Sanchez', '1984-07-23', current_date, " +
+                               "10, 'Samuel', 'Sanchez', '1954-07-23', current_date, " +
                                "'993248', 4, current_date, 30);");
 
             stmt.close();
