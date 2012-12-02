@@ -12,11 +12,11 @@ public class Szenario1 {
     public static void main(String[] args) {
         if (args.length <= 6 && args.length >= 4) {
             /*
-             * args[0] ... type -> [a|b], 
-             * args[1] ... server, 
+             * args[0] ... type -> [a|b],
+             * args[1] ... server,
              * args[2] ... port,
-             * args[3] ... database, 
-             * args[4] ... username, 
+             * args[3] ... database,
+             * args[4] ... username,
              * args[5] ... password
              */
 
@@ -24,11 +24,11 @@ public class Szenario1 {
 
             if (args.length == 4) {
                 conn = DBConnector.getConnection(args[1], args[2], args[3]);
-            } 
+            }
             else {
                 if (args.length == 5) {
                     conn = DBConnector.getConnection(args[1], args[2], args[3], args[4], "");
-                } 
+                }
                 else {
                     conn = DBConnector.getConnection(args[1], args[2], args[3], args[4], args[5]);
                 }
@@ -39,12 +39,12 @@ public class Szenario1 {
 
                 if (args[0].equals("a")) {
                     s.runTransactionA();
-                } 
+                }
                 else {
                     s.runTransactionB();
                 }
             }
-        } 
+        }
         else {
             System.err.println("Ungueltige Anzahl an Argumenten!");
         }
@@ -91,7 +91,7 @@ public class Szenario1 {
 
         /*
          * Abfrage 2:
-         * Ermitteln Sie das Durschnittsalter aller 
+         * Ermitteln Sie das Durschnittsalter aller
          * Personen und geben Sie dieses auf der der Konsole aus.
          */
 
@@ -123,23 +123,23 @@ public class Szenario1 {
         wait("Druecken Sie <ENTER> zum Starten der Transaktion ...");
 
         System.out.println("Transaktion B Start");
-        
+
         try {
             Statement stmt = connection.createStatement();
-            
-            stmt.executeUpdate("INSERT INTO Person (Vorname, Nachname, Geburtsdatum, Beitritt, " +
-                               "Telefon, Dienstgrad, Dienstgrad_seit, Mannschaft) VALUES (" +
-                               "'Samuel', 'Sanchez', '1984-07-23', current_date, " +
-                               "'993248', 9, current_date, 30);");
+
+            stmt.executeUpdate("INSERT INTO Person (id, Vorname, Nachname, Geburtstag, Beitrittstag, " +
+                               "Telefon, Dienstgrad, Dienstgrad_aenderung, Mannschaft) VALUES (" +
+                               "10, 'Samuel', 'Sanchez', '1984-07-23', current_date, " +
+                               "'993248', 4, current_date, 30);");
 
             stmt.close();
-            
+
             System.out.println("Eine Person wurde hinzugefuegt ...");
-            
+
             wait("Druecken Sie <ENTER> zum Beenden der Transaktion ...");
 
             connection.commit();
-        } 
+        }
         catch (SQLException ex) {
             Logger.getLogger(Szenario1.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -151,15 +151,15 @@ public class Szenario1 {
     }
 
     private static void wait(String message) {
-        /* 
-         * Vorgegebener Codeteil 
+        /*
+         * Vorgegebener Codeteil
          * ################################################################################
          */
         Scanner s = new Scanner(System.in);
         try {
             System.out.println(message);
             s.nextLine();
-        } 
+        }
         catch (Exception ex) {
             Logger.getLogger(Szenario1.class.getName()).log(Level.SEVERE, null, ex);
         }
