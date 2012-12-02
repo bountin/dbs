@@ -93,7 +93,7 @@ CREATE OR REPLACE FUNCTION f_bonus (p_id integer) RETURNS NUMERIC(9,2) AS $$
 			JOIN pers_wktruppe pwt ON p.id = pwt.person_id
 			JOIN wettkampftruppe wkt ON wkt.id = pwt.wktruppe_id
 			JOIN wettkampf_teilnahme wkteil ON wkteil.wktruppe_id = wkt.id
-			WHERE p.id = 1
+			WHERE p.id = p_id
 		)
 		SELECT sum(factor * sonderzahlung)
 		INTO summe
