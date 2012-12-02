@@ -153,6 +153,7 @@ INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES (2, 1, 'hans
 INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES (3, 1, 'hanswurst');
 INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES (4, 1, 'hanswurst');
 INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES (5, 1, 'hanswurst');
+INSERT INTO pers_wktruppe (person_id, wktruppe_id, funktion) VALUES (6, 2, 'hanswurst');
 
 
 --
